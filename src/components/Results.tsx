@@ -1,29 +1,23 @@
+import {ResultsStateType} from "../App"
 
-type ResultsStateType = {
-    results:{
-        country: string;
-        name: string;
-        temperature: string;
-        conditionText: string;
-        icon: string
+type ResultsStatePropsType = {
+    results: ResultsStateType;
 }
-  }
 
-const Results = ({results}: ResultsStateType) => {
-        const { country, name, temperature, conditionText, icon } = results;
+const Results = ({results}: ResultsStatePropsType) => {
+    const {country, cityName, temperature, conditionText, icon} = results;
     return (
         <>
             {country && <div className="results-country">{country}</div>}
-            {name && <div className="results-city">{name}</div>}
-            {temperature && <div className="results-temp">{temperature}<span>°C</span></div>}
-            {conditionText
-            && <div className="results-condition">
-                <img src={icon} alt="icon" />
-                <span>{conditionText}</span>
-                </div>
-            }
+            {cityName && <div className="results-city">{cityName}</div>}
+            {temperature && <div className="results-temp">{temperature}<span>度</span></div>}
+            {conditionText && 
+            <div className="results-condition">
+            <img src={icon} alt="icon"></img>
+            <span>{conditionText}</span>
+            </div>}
         </>
     );
-};
+}
 
-export default Results
+export default Results;
