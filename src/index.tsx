@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Reducer from './components/Reducer';
+import Callback from './components/Callback';
 import './App.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as Element);
 root.render(
   <React.StrictMode>
-    <Reducer initialValue={0}/>
+    <Callback />
   </React.StrictMode>
 );
 
