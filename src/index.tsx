@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Callback from './components/Callback';
+import Ref from './components/Ref';
 import './App.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as Element);
 root.render(
   <React.StrictMode>
-    <Callback />
+    <Ref />
   </React.StrictMode>
 );
 
